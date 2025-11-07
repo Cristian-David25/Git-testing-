@@ -1,0 +1,51 @@
+https://github.com/Cristian-David25/Git-testing-.git
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mis recuerdos — Presentación</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="hero">
+    <div class="carousel" id="carousel">
+      <!-- Slides: cambia los nombres de las imágenes según tus archivos -->
+      <div class="slide active">
+        <img src="fotos/foto1.jpg" alt="Recuerdo 1: vestido beige" />
+        <div class="caption">Recuerdo — Día especial</div>
+      </div>
+
+      <div class="slide">
+        <img src="fotos/foto2.jpg" alt="Recuerdo 2: retrato" />
+        <div class="caption">Recuerdo — Retrato</div>
+      </div>
+
+      <div class="slide">
+        <img src="fotos/foto3.jpg" alt="Recuerdo 3: río al atardecer" />
+        <div class="caption">Río al atardecer</div>
+      </div>
+
+      <div class="slide">
+        <img src="fotos/foto4.jpg" alt="Recuerdo 4: paisaje" />
+        <div class="caption">Paisaje tranquilo</div>
+      </div>
+
+      <!-- controles -->
+      <button class="nav prev" id="prev" aria-label="Anterior">❮</button>
+      <button class="nav next" id="next" aria-label="Siguiente">❯</button>
+
+      <!-- dots -->
+      <div class="dots" id="dots"></div>
+    </div>
+
+    <!-- pie con acciones -->
+    <aside class="controls">
+      <button id="playPause" class="play" aria-pressed="false">Pausar</button>
+      <small>Usa ← → o pausa con el botón. Pasa el ratón para pausar.</small>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
