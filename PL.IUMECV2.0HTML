@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IUMEC Distrito C - Iglesia Unión Misionera Evangélica Colombiana</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://www.iumec.org/wp-content/uploads/2023/07/IUMEC-Logo-Verde-e1746647402602-300x251.png">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="https://www.iumec.org/wp-content/uploads/2023/07/IUMEC-Logo-Verde-e1746647402602-300x251.png" alt="Logo IUMEC">
+      <h1>IUMEC Distrito C</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#ministerios">Ministerios</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h2>Iglesia Unión Misionera Evangélica Colombiana</h2>
+      <p>Una comunidad guiada por la <strong>Fe</strong>, la <strong>Palabra</strong> y la <strong>Acción</strong>.</p>
+      <button class="btn" onclick="scrollToSection('nosotros')">Conócenos</button>
+    </div>
+  </section>
+
+  <div class="lema">“Fe + Palabra + Acción”</div>
+
+  <section id="nosotros" class="section">
+    <h2>Sobre Nosotros</h2>
+    <button class="btn-toggle" onclick="toggleContent('infoNosotros')">Ver información</button>
+    <div id="infoNosotros" class="contenido">
+      <p>
+        La Iglesia Unión Misionera Evangélica Colombiana (IUMEC) es una comunidad cristiana
+        dedicada a la predicación del Evangelio de Jesucristo y al fortalecimiento espiritual
+        de sus miembros. En el Distrito C buscamos reflejar el amor de Cristo a través del servicio,
+        la enseñanza y la unidad del cuerpo de Cristo.
+      </p>
+    </div>
+  </section>
+
+  <section id="ministerios" class="section">
+    <h2>Ministerios</h2>
+    <button class="btn-toggle" onclick="toggleContent('infoMinisterios')">Ver ministerios</button>
+    <div id="infoMinisterios" class="contenido">
+      <ul>
+        <li>Ministerio de Alabanza y Adoración</li>
+        <li>Ministerio de Oración e Intercesión</li>
+        <li>Ministerio Infantil</li>
+        <li>Ministerio Juvenil</li>
+        <li>Ministerio de Evangelismo</li>
+        <li>Ministerio de Enseñanza Bíblica</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="eventos" class="section">
+    <h2>Eventos</h2>
+    <button class="btn-toggle" onclick="toggleContent('infoEventos')">Ver eventos</button>
+    <div id="infoEventos" class="contenido">
+      <ul>
+        <li>🕊️ Vigilia de Oración - Todos los viernes a las 8:00 p.m.</li>
+        <li>📖 Escuela Dominical - Domingos 9:00 a.m.</li>
+        <li>🎶 Noche de Alabanza - Segundo sábado de cada mes</li>
+        <li>🙏 Ayuno Congregacional - Primer sábado de cada mes</li>
+        <li>🫶 Campaña Evangelística - Próximamente</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="galeria" class="section">
+    <h2>Galería</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=800&q=80" alt="Culto de adoración">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80" alt="Oración en grupo">
+      <img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c4c?auto=format&fit=crop&w=800&q=80" alt="Lectura bíblica">
+      <img src="https://images.unsplash.com/photo-1585386959984-a41552231693?auto=format&fit=crop&w=800&q=80" alt="Congregación cristiana">
+    </div>
+  </section>
+
+  <section id="contacto" class="section">
+    <h2>Contacto</h2>
+    <p>📍 Dirección: Calle Principal #123, Quibdó, Chocó</p>
+    <p>📞 Teléfono: +57 300 000 0000</p>
+    <p>💌 Email: contacto@iumec.org</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 IUMEC Distrito C - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
