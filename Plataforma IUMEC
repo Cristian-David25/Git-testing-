@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IUMEC - Iglesia Unión Misionera Evangélica Colombiana</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* --- Encabezado fijo --- */
+    header {
+      background-color: #007f3d;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    header img {
+      height: 45px;
+      width: 45px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #c8f7dc;
+    }
+
+    /* --- Hero principal --- */
+    .hero {
+      background: linear-gradient(rgba(0, 127, 61, 0.85), rgba(0, 127, 61, 0.85)),
+        url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=1400&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 130px 20px 100px;
+      margin-top: 70px; /* espacio por header fijo */
+    }
+
+    .hero h2 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    /* --- Lema --- */
+    .lema {
+      background-color: #007f3d;
+      color: white;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.2rem;
+      padding: 10px;
+      letter-spacing: 1px;
+    }
+
+    /* --- Secciones --- */
+    section {
+      padding: 50px 20px;
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #007f3d;
+      margin-bottom: 20px;
+    }
+
+    /* --- Botones redondeados --- */
+    .btn {
+      background-color: #007f3d;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      margin: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 80%;
+      max-width: 300px;
+    }
+
+    .btn:hover {
+      background-color: #00a14d;
+      transform: scale(1.05);
+    }
+
+    /* --- Contenido desplegable --- */
+    .contenido {
+      display: none;
+      background-color: #f5f5f5;
+      border-left: 5px solid #007f3d;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 10px;
+      text-align: left;
+      animation: fade 0.4s ease;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* --- Footer --- */
+    footer {
+      background-color: #007f3d;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+    }
+
+    /* --- Responsivo --- */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #007f3d;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        padding: 15px;
+        border-radius: 10px;
+      }
+
+      nav.active ul {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+        background: none;
+        border: 2px solid white;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+
+    .menu-btn {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/3448/3448593.png" alt="Logo IUMEC">
+      <span>IUMEC</span>
+    </div>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <nav id="menu">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#iglesia">Nuestra Iglesia</a></li>
+        <li><a href="#ministerios">Ministerios</a></li>
+        <li><a href="#ensenanzas">Enseñanzas</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero" id="inicio">
+    <h2>Iglesia Unión Misionera Evangélica Colombiana</h2>
+    <p>Una comunidad guiada por la fe, la palabra y la acción en Cristo Jesús.</p>
+  </div>
+
+  <div class="lema">“Fe + Palabra + Acción”</div>
+
+  <section>
+    <h2>Conoce más sobre nosotros</h2>
+
+    <button class="btn" onclick="toggleContent('iglesiaCont')">Nuestra Iglesia</button>
+    <div id="iglesiaCont" class="contenido">
+      <p>
+        La Iglesia Unión Misionera Evangélica Colombiana (IUMEC) fue fundada con el propósito 
+        de expandir el evangelio de Jesucristo y fortalecer la unidad del cuerpo de Cristo 
+        en Colombia. Creemos en el poder de la fe, la enseñanza de la palabra y la acción 
+        como fruto del amor de Dios.
+      </p>
+    </div>
+
+    <button class="btn" onclick="toggleContent('ministeriosCont')">Ministerios</button>
+    <div id="ministeriosCont" class="contenido">
+      <p>
+        Contamos con diferentes ministerios para servir al Señor y a la comunidad:  
+        <strong>Ministerio de Alabanza</strong>, <strong>Juventud IUMEC</strong>,  
+        <strong>Ministerio Infantil</strong> y <strong>Oración e Intercesión</strong>.  
+        Cada ministerio busca glorificar a Dios y edificar a los creyentes.
+      </p>
+    </div>
+
+    <button class="btn" onclick="toggleContent('ensenanzasCont')">Enseñanzas</button>
+    <div id="ensenanzasCont" class="contenido">
+      <p>
+        En esta sección encontrarás devocionales, reflexiones bíblicas, y enseñanzas 
+        que fortalecerán tu fe. Nuestra meta es compartir la palabra viva de Dios 
+        de manera clara y edificante.
+      </p>
+    </div>
+
+    <button class="btn" onclick="toggleContent('eventosCont')">Eventos</button>
+    <div id="eventosCont" class="contenido">
+      <p>
+        Mantente informado sobre nuestras reuniones, conferencias y actividades especiales.  
+        Cada evento es una oportunidad para crecer en comunión y fe.
+      </p>
+    </div>
+
+    <button class="btn" onclick="toggleContent('contactoCont')">Contacto</button>
+    <div id="contactoCont" class="contenido">
+      <p>
+        📍 Dirección: Calle Principal #123, Quibdó, Chocó  
+        📞 Teléfono: +57 300 000 0000  
+        💌 Email: contacto@iumec.org  
+        Si deseas enviarnos una petición de oración o un mensaje, estaremos felices de escucharte.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 IUMEC - Iglesia Unión Misionera Evangélica Colombiana</p>
+  </footer>
+
+  <script>
+    function toggleContent(id) {
+      const content = document.getElementById(id);
+      const visible = content.style.display === "block";
+      document.querySelectorAll('.contenido').forEach(div => div.style.display = "none");
+      content.style.display = visible ? "none" : "block";
+    }
+
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
