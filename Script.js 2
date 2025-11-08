@@ -1,0 +1,10 @@
+function toggleContent(id) {
+  const content = document.getElementById(id);
+  const visible = content.style.display === "block";
+  document.querySelectorAll('.contenido').forEach(div => div.style.display = "none");
+  content.style.display = visible ? "none" : "block";
+}
+
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+}
